@@ -1,0 +1,109 @@
+.portfolio__container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+	position: relative;
+}
+
+.portfolio__item {
+	background: var(--color-bg-variant);
+	padding: 1.3rem;
+	border-radius: 2rem;
+	border: 1px solid transparent;
+}
+
+.portfolio__item:hover {
+	border-color: var(--color-primary-variant);
+	background: transparent;
+}
+
+.portfolio__item-image {
+	border-radius: 1.5rem;
+	overflow: hidden;
+	height: 220px;
+}
+
+.portfolio__item h3 {
+	margin: 1.2rem 0 1.2rem;
+}
+
+.portfolio__item-cta {
+	display: flex;
+	gap: 1rem;
+	margin-bottom: 0.6rem;
+}
+
+.portfolio__carousel {
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	top: -3rem;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 1rem 0;
+}
+
+.leftArrow_carousel,
+.rightArrow_carousel {
+	font-size: 1.5rem;
+	color: var(--color-light);
+	background: transparent;
+}
+
+.leftArrow_carousel:hover,
+.rightArrow_carousel:hover {
+	color: var(--color-white);
+	transition: var(--transition);
+}
+
+.portfolio__carousel-index {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.swipe-right {
+	transform: translateX(0%);
+	animation-name: SwipeRight;
+	animation-duration: 1000ms;
+}
+
+@keyframes SwipeRight {
+	from {
+		transform: translateX(-100%);
+	}
+	to {
+		transform: translateX(0%);
+	}
+}
+
+.swipe-left {
+	transform: translateX(0%);
+	animation-name: SwipeLeft;
+	animation-duration: 1000ms;
+}
+
+@keyframes SwipeLeft {
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(0%);
+	}
+}
+
+/* ========== MEDIA QUERIES - MEDIUM DEVICES ========== */
+@media screen and (max-width: 1024px) {
+	.portfolio__container {
+		grid-template-columns: 1fr;
+		gap: 1.2rem;
+	}
+}
+
+/* ========== MEDIA QUERIES - SMALL DEVICES ========== */
+@media screen and (max-width: 600px) {
+	.portfolio__container {
+		grid-template-columns: 1fr;
+		gap: 1rem;
+	}
+}

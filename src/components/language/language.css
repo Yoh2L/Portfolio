@@ -1,0 +1,18 @@
+.container__language {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	top: 0;
+	left: 100%;
+	transform: translateX(-100%);
+}
+
+.select_language--btn {
+	width: 50px;
+	background: transparent;
+}
+
+.selected--btn {
+	padding: 0 0 0.5rem 0;
+}
